@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/nextbillion-ai/main/json-schema/nextbillion-ai-post-navigation-request-schema.json",
+  "title": "PostNavigationRequest",
+  "x-generated": "2026-10-13",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/nextbillion-ai-openapi-generated.yml#/components/schemas/PostNavigationRequest",
+  "type": "object",
+  "properties": {
+    "origin": {
+      "type": "string",
+      "description": "Latitude,longitude of the start point."
+    },
+    "destination": {
+      "type": "string",
+      "description": "Latitude,longitude of the end point."
+    },
+    "mode": {
+      "type": "string",
+      "description": "Travel mode (e.g., car, truck, bike)."
+    },
+    "departure_time": {
+      "type": "string",
+      "description": "Unix timestamp for departure."
+    },
+    "avoid": {
+      "type": "string",
+      "description": "Features to avoid (e.g., toll, highway, sharp_turn)."
+    },
+    "hazmat_type": {
+      "type": "string",
+      "description": "Hazardous material type for truck routing."
+    }
+  }
+}

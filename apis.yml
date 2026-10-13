@@ -1,23 +1,123 @@
 aid: nextbillion-ai
+
 name: NextBillion.ai
-description: 'NextBillion.ai is a company surfaced via the API Evangelist harvest backlog (source: tag-qc)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://nextbillion.ai/wp-content/uploads/2025/01/Home-OG-V2.png
+
+description: NextBillion.ai provides a suite of location‑based routing and optimization APIs, including Route Optimization, Distance Matrix, Directions,
+  Driver Assignment, and Navigation SDKs. Their platform leverages AI to deliver accurate ETAs, dynamic routing, and fleet management solutions
+  for logistics, delivery, and field service operations. The company offers on‑premise deployment and extensive documentation for developers.
+
 url: https://raw.githubusercontent.com/api-evangelist/nextbillion-ai/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:tag-qc
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-13 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-13'
+
 modified: '2026-10-13'
+
 tags:
 - Company
-apis: []
+- API
+- Routing
+- Logistics
+- AI
+- Mapping
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Spectral
+  url: rules/nextbillion-ai-rules.yml
+- type: JSONLD
+  url: json-ld/nextbillion-ai-context.jsonld
+- type: Vocabulary
+  url: vocabulary/nextbillion-ai-vocabulary.yml
+- type: DataModel
+  url: data-model/nextbillion-ai-data-model.yml
+- type: ChangeLog
+  url: changelog/nextbillion-ai-changelog.yml
+- type: Conformance
+  url: conformance/nextbillion-ai-conformance.yml
+- type: LLMsTxt
+  url: llms/nextbillion-ai-llms.txt
+- type: Hosts
+  url: hosts/nextbillion-ai-hosts.yml
+- type: Vendors
+  url: vendors/nextbillion-ai-vendors.yml
+- type: SDKs
+  url: packages/nextbillion-ai-packages.yml
+- type: Packages
+  url: packages/nextbillion-ai-packages.yml
+- type: TrustCenter
+  url: https://nextbillion.ai/trust-center
+- type: TermsOfService
+  url: https://nextbillion.ai/terms-of-service
+- type: PrivacyPolicy
+  url: https://nextbillion.ai/privacy
+- type: Pricing
+  url: https://nextbillion.ai/pricing
+- type: GettingStarted
+  url: https://nextbillion.ai/get-started
+- type: Blog
+  url: https://nextbillion.ai/blog
+- type: Documentation
+  url: https://docs.nextbillion.ai/
+- type: DeveloperPortal
+  url: https://api.nextbillion.io/optimization/v2?key={your_api_key}</p
+- type: DomainSecurity
+  url: security/nextbillion-ai-domain-security.yml
 - type: Website
   url: https://nextbillion.ai/
+
+apis:
+- name: NextBillion AI API
+  description: Location‑based routing and optimization APIs as described in the developer documentation.
+  humanURL: https://docs.nextbillion.ai/
+  aid: nextbillion-ai:nextbillion-ai-api-2
+- aid: nextbillion-ai:nextbillion-ai-api
+  name: NextBillion.ai API
+  description: 'NextBillion.ai API as documented publicly: 18 operations. Contract generated from the documentation by API Evangelist (2026-10-13);
+
+    not the provider''s own document.'
+  humanURL: https://docs.nextbillion.ai/routing/directions-api
+  baseURL: https://api.nextbillion.io
+  properties:
+  - type: OpenAPI
+    url: openapi/_ae-authored/nextbillion-ai-openapi-generated.yml
+    x-provenance: generated
+  - type: JSONSchema
+    url: json-schema/nextbillion-ai-post-navigation-request-schema.json
+  - type: JSONSchema
+    url: json-schema/nextbillion-ai-get-mdm-status-response-schema.json
+  - type: JSONSchema
+    url: json-schema/nextbillion-ai-get-navigation-json-response-schema.json
+  - type: JSONSchema
+    url: json-schema/nextbillion-ai-get-navigation-response-schema.json
+  - type: JSONSchema
+    url: json-schema/nextbillion-ai-post-navigation-response-schema.json
+
+x-coverage:
+  state: unreadable
+  reason: js-rendered-docs
+  detail: Documentation pages are rendered via JavaScript and no machine‑readable OpenAPI spec was found.
+  evidence:
+  - url: https://docs.nextbillion.ai/
+    status: 200
+x-enrichment:
+  date: '2026-10-13'
+  status: enriched
+  artifacts_added: 21
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local

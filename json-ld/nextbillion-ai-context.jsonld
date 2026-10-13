@@ -1,0 +1,61 @@
+{
+  "@context": {
+    "@vocab": "https://nextbillion.ai/schema#",
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "nextbillion": "https://nextbillion.ai/schema#",
+    "GetMdmStatusResponse": "nextbillion:GetMdmStatusResponse",
+    "code": {
+      "@id": "nextbillion:code",
+      "@type": "xsd:string"
+    },
+    "status": {
+      "@id": "nextbillion:status",
+      "@type": "xsd:string"
+    },
+    "result_link": {
+      "@id": "nextbillion:result_link",
+      "@type": "xsd:string"
+    },
+    "GetNavigationResponse": "nextbillion:GetNavigationResponse",
+    "routes": {
+      "@id": "nextbillion:routes",
+      "@container": "@list"
+    },
+    "PostNavigationRequest": "nextbillion:PostNavigationRequest",
+    "origin": {
+      "@id": "nextbillion:origin",
+      "@type": "xsd:string"
+    },
+    "destination": {
+      "@id": "nextbillion:destination",
+      "@type": "xsd:string"
+    },
+    "mode": {
+      "@id": "nextbillion:mode",
+      "@type": "xsd:string"
+    },
+    "departure_time": {
+      "@id": "nextbillion:departure_time",
+      "@type": "xsd:string"
+    },
+    "avoid": {
+      "@id": "nextbillion:avoid",
+      "@type": "xsd:string"
+    },
+    "hazmat_type": {
+      "@id": "nextbillion:hazmat_type",
+      "@type": "xsd:string"
+    },
+    "PostNavigationResponse": "nextbillion:PostNavigationResponse",
+    "GetNavigationJsonResponse": "nextbillion:GetNavigationJsonResponse"
+  },
+  "@type": "schema:Dataset",
+  "schema:name": "NextBillion.ai API JSON-LD context",
+  "schema:description": "A JSON-LD @context for the objects NextBillion.ai's own API contract declares: one class per component schema, one property per declared field, typed from the contract. Derived by script (derive-json-ld.py, 2026-10-13) from openapi/_ae-authored/nextbillion-ai-openapi-generated.yml.",
+  "dcterms:created": "2026-10-13",
+  "dcterms:source": [
+    "openapi/_ae-authored/nextbillion-ai-openapi-generated.yml"
+  ]
+}

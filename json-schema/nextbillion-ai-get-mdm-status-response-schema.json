@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/nextbillion-ai/main/json-schema/nextbillion-ai-get-mdm-status-response-schema.json",
+  "title": "GetMdmStatusResponse",
+  "x-generated": "2026-10-13",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/nextbillion-ai-openapi-generated.yml#/components/schemas/GetMdmStatusResponse",
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "string",
+      "description": "Response status code, e.g., \"Ok\"."
+    },
+    "status": {
+      "type": "string",
+      "description": "Current status of the task, e.g., \"task fully succeeded\"."
+    },
+    "result_link": {
+      "type": "string",
+      "description": "URL to the CSV file containing the distance matrix results."
+    }
+  }
+}

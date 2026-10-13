@@ -1,0 +1,18 @@
+generated: '2026-10-13'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://nextbillion.ai/blog/nextbillion-ai-product-updates-whats-new-in-q3-2026
+sources:
+- https://nextbillion.ai/blog/nextbillion-ai-product-updates-whats-new-in-q3-2026
+entries:
+- breaking: false
+  highlights:
+  - 'Published: October 1, 2026 – NextBillion.ai Product Updates — Q3 2026.'
+  - 'Traffic Lights and Stop Signs: Directions and Navigation APIs now provide traffic lights and stop signs as road‑information items, offering
+    richer context for navigation and driver applications.'
+  - Geocoding, Structured Geocoding and Batch Geocoding API now support address types, making it easier to classify and work with different categories
+    of address results across geocoding workflows.
+  - 'AI‑Friendly Documentation: New View Markdown and Copy for LLM options let developers quickly provide clean, structured API documentation
+    to AI tools.'
+  date: '2026-10-01'
+docs: https://nextbillion.ai/blog/nextbillion-ai-product-updates-whats-new-in-q3-2026

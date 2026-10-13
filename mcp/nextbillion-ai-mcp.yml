@@ -1,0 +1,106 @@
+generated: '2026-10-13'
+method: derived
+generator: derive-mcp-candidate.py
+source:
+- openapi/_ae-authored/nextbillion-ai-openapi-generated.yml
+status: candidate
+deployment:
+  mode: none
+  auth: unknown
+  verified: probed
+note: No MCP server was found. The pre-flight posted tools/list to /mcp on api.nextbillion.ai, nextbillion.ai, docs.nextbillion.ai, feeds.nextbillion.ai;
+  verdict absent. Candidate tools below are derived from the 18 operation(s) in the provider's own OpenAPI (18 listed); they describe what a server
+  WOULD expose, not one that exists.
+tools:
+- name: get_directions_json
+  operationId: get_directions_json
+  method: GET
+  path: /directions/json
+  description: Directions Flexible API
+- name: post_directions_json
+  operationId: post_directions_json
+  method: POST
+  path: /directions/json
+  description: Directions Flexible API
+- name: get_distancematrix_json
+  operationId: get_distancematrix_json
+  method: GET
+  path: /distancematrix/json
+  description: Distance Matrix API Synchronous
+- name: post_distancematrix_json
+  operationId: post_distancematrix_json
+  method: POST
+  path: /distancematrix/json
+  description: Distance Matrix API Synchronous
+- name: post_hos_trip_plan
+  operationId: post_hos_trip_plan
+  method: POST
+  path: /hos/trip-plan
+  description: POST /hos/trip-plan
+- name: get_isochrone_json
+  operationId: get_isochrone_json
+  method: GET
+  path: /isochrone/json
+  description: GET /isochrone/json
+- name: post_mdm_create
+  operationId: post_mdm_create
+  method: POST
+  path: /mdm/create
+  description: POST /mdm/create
+- name: get_mdm_status
+  operationId: get_mdm_status
+  method: GET
+  path: /mdm/status
+  description: Use this method to retrieve the Distance Matrix solution link for the tasks created using either of the Asynchronous Distance Matrix
+    POST methods.
+- name: get_navigation
+  operationId: get_navigation
+  method: GET
+  path: /navigation
+  description: Navigation API
+- name: post_navigation
+  operationId: post_navigation
+  method: POST
+  path: /navigation
+  description: Navigation API
+- name: get_navigation_json
+  operationId: get_navigation_json
+  method: GET
+  path: /navigation/json
+  description: Navigation API
+- name: post_navigation_json
+  operationId: post_navigation_json
+  method: POST
+  path: /navigation/json
+  description: POST /navigation/json
+- name: post_optimization_driver_assignment_v1
+  operationId: post_optimization_driver_assignment_v1
+  method: POST
+  path: /optimization/driver-assignment/v1
+  description: The Driver Assignment API’s synchronous method caters to quick, near real‑time assignment requirements.
+- name: get_optimization_driver_assignment_v1_async
+  operationId: get_optimization_driver_assignment_v1_async
+  method: GET
+  path: /optimization/driver-assignment/v1/async
+  description: To obtain the calculated assignment solution, you must provide the specific id that was generated and returned after submitting
+    the initial POST request.
+- name: post_optimization_driver_assignment_v1_async
+  operationId: post_optimization_driver_assignment_v1_async
+  method: POST
+  path: /optimization/driver-assignment/v1/async
+  description: POST /optimization/driver-assignment/v1/async
+- name: post_optimization_re_optimization
+  operationId: post_optimization_re_optimization
+  method: POST
+  path: /optimization/re_optimization
+  description: Re-optimize An Existing Solution
+- name: post_optimization_v2
+  operationId: post_optimization_v2
+  method: POST
+  path: /optimization/v2
+  description: Build an Optimization Request
+- name: get_optimization_v2_result
+  operationId: get_optimization_v2_result
+  method: GET
+  path: /optimization/v2/result
+  description: Retrieve Optimized Solution

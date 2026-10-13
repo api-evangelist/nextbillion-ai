@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/nextbillion-ai/main/json-schema/nextbillion-ai-post-navigation-response-schema.json",
+  "title": "PostNavigationResponse",
+  "x-generated": "2026-10-13",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_ae-authored/nextbillion-ai-openapi-generated.yml#/components/schemas/PostNavigationResponse",
+  "type": "object",
+  "properties": {
+    "status": {
+      "type": "string",
+      "description": "Response status, e.g., \"Ok\"."
+    },
+    "routes": {
+      "type": "array",
+      "description": "Array of route objects."
+    }
+  }
+}

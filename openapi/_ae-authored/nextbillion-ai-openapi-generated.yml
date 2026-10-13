@@ -1,0 +1,563 @@
+openapi: 3.1.0
+info:
+  title: NextBillion.ai API
+  version: '2026-10-13'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-13: 18 operation(s) read from 8 public documentation page(s) (each operation
+    names its page in x-source). This is not the provider''s published contract; NextBillion.ai has published no machine-readable contract that
+    the pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 5
+    documentation: 13
+    pages-with-code: 5
+    pages-read: 8
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-13'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://docs.nextbillion.ai/routing/directions-api
+  - https://docs.nextbillion.ai/routing/navigation-api
+  - https://docs.nextbillion.ai/optimization/route-optimization-api
+  - https://docs.nextbillion.ai/routing/distance-matrix-api/synchronous
+  - https://docs.nextbillion.ai/routing/isochrone-api
+  - https://docs.nextbillion.ai/routing/hours-of-service-api
+  - https://docs.nextbillion.ai/optimization/driver-assignment-api
+  - https://docs.nextbillion.ai/routing/distance-matrix-api/asynchronous
+servers:
+- url: https://api.nextbillion.io
+paths:
+  /directions/json:
+    get:
+      operationId: get_directions_json
+      tags:
+      - Directions
+      summary: Directions Flexible API
+      description: GET https://api.nextbillion.io/directions/json?option=flexible&key={your_api_key}
+      x-source: https://docs.nextbillion.ai/routing/directions-api
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+    post:
+      operationId: post_directions_json
+      tags:
+      - Directions
+      summary: Directions Flexible API
+      description: POST https://api.nextbillion.io/directions/json?option=flexible&key={your_api_key}
+      x-source: https://docs.nextbillion.ai/routing/directions-api
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /distancematrix/json:
+    get:
+      operationId: get_distancematrix_json
+      tags:
+      - Distancematrix
+      summary: Distance Matrix API Synchronous
+      description: GET https://api.nextbillion.io/distancematrix/json?key={your_api_key} (option=flexible for Flexible API). Returns a matrix
+        of ETAs and distances.
+      x-source: https://docs.nextbillion.ai/routing/distance-matrix-api/synchronous
+      parameters:
+      - name: key
+        in: query
+        required: true
+        schema:
+          type: string
+        description: Your API key
+      - name: option
+        in: query
+        required: false
+        schema:
+          type: string
+        description: Set to "flexible" to use the Flexible version
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+    post:
+      operationId: post_distancematrix_json
+      tags:
+      - Distancematrix
+      summary: Distance Matrix API Synchronous
+      description: POST https://api.nextbillion.io/distancematrix/json?key={your_api_key} (option=flexible for Flexible API). Request body contains
+        the same parameters as the GET request.
+      x-source: https://docs.nextbillion.ai/routing/distance-matrix-api/synchronous
+      parameters:
+      - name: key
+        in: query
+        required: true
+        schema:
+          type: string
+        description: Your API key
+      - name: option
+        in: query
+        required: false
+        schema:
+          type: string
+        description: Set to "flexible" to use the Flexible version
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /hos/trip-plan:
+    post:
+      operationId: post_hos_trip_plan
+      tags:
+      - Hos
+      summary: POST /hos/trip-plan
+      x-source: https://docs.nextbillion.ai/routing/hours-of-service-api
+      parameters:
+      - name: key
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: 'curl --location ''https://api.nextbillion.io/hos/trip-plan?key=<your_api_key>'' \ 2 --header ''Content-Type: application/json''
+          \ 3 --data ''{ 4 "poi_stops": true, 5 "hos_break_window": 2100, 6 "hos_regulations": { 7 "type": "US70H8D", 8 "include_cycle_reset":
+          false 9 }, 10 "driver_current_hos_state": { 11 "daily_drive_time_used": 22000, 12 "daily_duty_time_used": 26000, 13 "daily_cycle_duty_times":
+          []'
+  /isochrone/json:
+    get:
+      operationId: get_isochrone_json
+      tags:
+      - Isochrone
+      summary: GET /isochrone/json
+      x-source: https://docs.nextbillion.ai/routing/isochrone-api
+      parameters:
+      - name: key
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl --location 'https://api.nextbillion.io/isochrone/json?key=<your_api_key>&coordinates=34.04715844,-118.24977187&mode=car&contours_minutes=5'\
+          \ \n Response \n 1 { 2 \"features\" : [ ... ] , 3 \"type\" : \"FeatureCollection\" 4 } Expand \n Here is how the above response looks\
+          \ on a map. We can easily visualize the area reachable within 5 minutes. It is enclosed by a contour line or a polygon around the star"
+  /mdm/create:
+    post:
+      operationId: post_mdm_create
+      tags:
+      - Mdm
+      summary: POST /mdm/create
+      x-source: https://docs.nextbillion.ai/routing/distance-matrix-api/asynchronous
+      parameters:
+      - name: key
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl --location 'https://api.nextbillion.io/mdm/create?key=<your_api_key>&option=flexible' \\ 2 --header 'Content-Type: application/json'\
+          \ \\ 3 --data '{ 4 \"origins\":\"13.03394916,77.58855989\", 5 \"destinations\":\"13.03935192,77.58939313\", 6 \"mode\":\"truck\", 7\
+          \ \"truck_size\":\"100,220,213\", 8 \"truck_weight\":5000 9 }' \n Sample POST Response \n Here is the response that we receive on submitting\
+          \ the POST reques"
+  /mdm/status:
+    get:
+      operationId: get_mdm_status
+      tags:
+      - Mdm
+      summary: Use this method to retrieve the Distance Matrix solution link for the tasks created using either of the Asynchronous Distance Matrix
+        POST methods.
+      description: Retrieve the processing status and result link for a previously submitted asynchronous distance matrix task.
+      x-source: https://docs.nextbillion.ai/routing/distance-matrix-api/asynchronous
+      parameters:
+      - name: key
+        in: query
+        required: true
+        schema:
+          type: string
+        description: Your API key.
+      - name: id
+        in: query
+        required: true
+        schema:
+          type: string
+        description: The task_id returned from the POST request.
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetMdmStatusResponse'
+      x-evidence:
+        kind: documentation
+  /navigation:
+    get:
+      operationId: get_navigation
+      tags:
+      - Navigation
+      summary: Navigation API
+      x-source: https://docs.nextbillion.ai/routing/navigation-api
+      parameters:
+      - name: option
+        in: query
+        required: true
+        schema:
+          type: string
+        description: Selects the API version – "flexible" for the flexible endpoint.
+      - name: key
+        in: query
+        required: true
+        schema:
+          type: string
+        description: Your API key.
+      - name: origin
+        in: query
+        required: false
+        schema:
+          type: string
+        description: Latitude,longitude of the start point.
+      - name: destination
+        in: query
+        required: false
+        schema:
+          type: string
+        description: Latitude,longitude of the end point.
+      - name: mode
+        in: query
+        required: false
+        schema:
+          type: string
+        description: Travel mode (e.g., car, truck, bike).
+      - name: departure_time
+        in: query
+        required: false
+        schema:
+          type: string
+        description: Unix timestamp for departure.
+      - name: avoid
+        in: query
+        required: false
+        schema:
+          type: string
+        description: Features to avoid (e.g., toll, highway, sharp_turn).
+      - name: hazmat_type
+        in: query
+        required: false
+        schema:
+          type: string
+        description: Hazardous material type for truck routing.
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetNavigationResponse'
+      x-evidence:
+        kind: documentation
+    post:
+      operationId: post_navigation
+      tags:
+      - Navigation
+      summary: Navigation API
+      x-source: https://docs.nextbillion.ai/routing/navigation-api
+      parameters:
+      - name: option
+        in: query
+        required: true
+        schema:
+          type: string
+        description: Selects the API version – "flexible" for the flexible endpoint.
+      - name: key
+        in: query
+        required: true
+        schema:
+          type: string
+        description: Your API key.
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostNavigationRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostNavigationResponse'
+      x-evidence:
+        kind: documentation
+  /navigation/json:
+    get:
+      operationId: get_navigation_json
+      tags:
+      - Navigation
+      summary: Navigation API
+      x-source: https://docs.nextbillion.ai/routing/navigation-api
+      parameters:
+      - name: option
+        in: query
+        required: false
+        schema:
+          type: string
+        description: Selects the API version – "flexible" for flexible, omitted for fast.
+      - name: key
+        in: query
+        required: true
+        schema:
+          type: string
+        description: Your API key.
+      - name: origin
+        in: query
+        required: false
+        schema:
+          type: string
+        description: Latitude,longitude of the start point.
+      - name: destination
+        in: query
+        required: false
+        schema:
+          type: string
+        description: Latitude,longitude of the end point.
+      - name: mode
+        in: query
+        required: false
+        schema:
+          type: string
+        description: Travel mode (car, truck, etc.).
+      - name: departure_time
+        in: query
+        required: false
+        schema:
+          type: string
+        description: Unix timestamp for departure.
+      - name: avoid
+        in: query
+        required: false
+        schema:
+          type: string
+        description: Features to avoid (e.g., highway|toll, sharp_turn).
+      - name: hazmat_type
+        in: query
+        required: false
+        schema:
+          type: string
+        description: Hazardous material type for truck routing.
+      - name: overview
+        in: query
+        required: false
+        schema:
+          type: string
+        description: Level of geometry detail (e.g., simplified).
+      - name: waypoints
+        in: query
+        required: false
+        schema:
+          type: string
+        description: Additional intermediate points.
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetNavigationJsonResponse'
+      x-evidence:
+        kind: documentation
+    post:
+      operationId: post_navigation_json
+      tags:
+      - Navigation
+      summary: POST /navigation/json
+      x-source: https://docs.nextbillion.ai/routing/navigation-api
+      parameters:
+      - name: key
+        in: query
+        required: false
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl --location 'https://api.nextbillion.io/navigation/json?key=<your_api_key>&origin=48.22539980,-101.29602541&destination=48.24027183,-101.29608570&mode=truck&option=flexible&hazmat_type=circumstantial'\
+          \ \n Response \n 1 { 2 \"status\" : \"Ok\" , 3 \"routes\" : [ ... ] 4 } Expand \n GET Request Example 3 \n Next we will create a navigation\
+          \ flexible request for a trip where we want to avoid sharp turns whic"
+  /optimization/driver-assignment/v1:
+    post:
+      operationId: post_optimization_driver_assignment_v1
+      tags:
+      - Optimization
+      summary: The Driver Assignment API’s synchronous method caters to quick, near real‑time assignment requirements.
+      x-source: https://docs.nextbillion.ai/optimization/driver-assignment-api
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /optimization/driver-assignment/v1/async:
+    get:
+      operationId: get_optimization_driver_assignment_v1_async
+      tags:
+      - Optimization
+      summary: To obtain the calculated assignment solution, you must provide the specific id that was generated and returned after submitting
+        the initial POST request.
+      x-source: https://docs.nextbillion.ai/optimization/driver-assignment-api
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+    post:
+      operationId: post_optimization_driver_assignment_v1_async
+      tags:
+      - Optimization
+      summary: POST /optimization/driver-assignment/v1/async
+      x-source: https://docs.nextbillion.ai/optimization/driver-assignment-api
+      parameters:
+      - name: key
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl --location 'https : //api.nextbillion.io/optimization/driver-assignment/v1?key=<your_api_key>' --header 'Content-Type:\
+          \ application/json; charset=utf-8' --data '{ 2 \"filter\" : { ... } , 3 \"options\" : { ... } , 4 \"orders\" : [ ... ] , 5 \"vehicles\"\
+          \ : [ ... ] 6 } ' Expand \n Sample Response \n 1 { 2 \"status\" : 200 , 3 \"result\" : { 4 \"trips\" : [ ... ] , 5 \"unassigned_orders\"\
+          \ : [ ... ] , 6 \"available_"
+  /optimization/re_optimization:
+    post:
+      operationId: post_optimization_re_optimization
+      tags:
+      - Optimization
+      summary: Re-optimize An Existing Solution
+      x-source: https://docs.nextbillion.ai/optimization/route-optimization-api
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /optimization/v2:
+    post:
+      operationId: post_optimization_v2
+      tags:
+      - Optimization
+      summary: Build an Optimization Request
+      x-source: https://docs.nextbillion.ai/optimization/route-optimization-api
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /optimization/v2/result:
+    get:
+      operationId: get_optimization_v2_result
+      tags:
+      - Optimization
+      summary: Retrieve Optimized Solution
+      x-source: https://docs.nextbillion.ai/optimization/route-optimization-api
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+components:
+  schemas:
+    GetMdmStatusResponse:
+      type: object
+      properties:
+        code:
+          type: string
+          description: Response status code, e.g., "Ok".
+        status:
+          type: string
+          description: Current status of the task, e.g., "task fully succeeded".
+        result_link:
+          type: string
+          description: URL to the CSV file containing the distance matrix results.
+    GetNavigationResponse:
+      type: object
+      properties:
+        status:
+          type: string
+          description: Response status, e.g., "Ok".
+        routes:
+          type: array
+          description: Array of route objects.
+    PostNavigationRequest:
+      type: object
+      properties:
+        origin:
+          type: string
+          description: Latitude,longitude of the start point.
+        destination:
+          type: string
+          description: Latitude,longitude of the end point.
+        mode:
+          type: string
+          description: Travel mode (e.g., car, truck, bike).
+        departure_time:
+          type: string
+          description: Unix timestamp for departure.
+        avoid:
+          type: string
+          description: Features to avoid (e.g., toll, highway, sharp_turn).
+        hazmat_type:
+          type: string
+          description: Hazardous material type for truck routing.
+    PostNavigationResponse:
+      type: object
+      properties:
+        status:
+          type: string
+          description: Response status, e.g., "Ok".
+        routes:
+          type: array
+          description: Array of route objects.
+    GetNavigationJsonResponse:
+      type: object
+      properties:
+        status:
+          type: string
+          description: Response status, e.g., "Ok".
+        routes:
+          type: array
+          description: Array of route objects.
+tags:
+- name: Directions
+- name: Distancematrix
+- name: Hos
+- name: Isochrone
+- name: Mdm
+- name: Navigation
+- name: Optimization
