@@ -1,0 +1,24 @@
+{
+  "provider": "nextbillion-ai",
+  "sources": [
+    "_ae-authored/nextbillion-ai-openapi-generated.yml"
+  ],
+  "outputs": [
+    "nextbillion-ai-directions-api-openapi.yml",
+    "nextbillion-ai-distancematrix-api-openapi.yml",
+    "nextbillion-ai-hos-api-openapi.yml",
+    "nextbillion-ai-isochrone-api-openapi.yml",
+    "nextbillion-ai-mdm-api-openapi.yml",
+    "nextbillion-ai-navigation-api-openapi.yml",
+    "nextbillion-ai-optimization-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [
+    "sourced from openapi/_original/ (0 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "nextbillion-ai-openapi-generated.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "apis.yml register: written (+7 apis, 8 total)"
+  ],
+  "skipped": []
+}

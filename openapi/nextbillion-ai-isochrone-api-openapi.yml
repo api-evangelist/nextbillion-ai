@@ -1,0 +1,50 @@
+openapi: 3.2.0
+info:
+  title: NextBillion.ai Isochrone API
+  version: '2026-10-13'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-13: 18 operation(s) read from 8 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; NextBillion.ai has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 5
+    documentation: 13
+    pages-with-code: 5
+    pages-read: 8
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-13'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://docs.nextbillion.ai/routing/directions-api
+  - https://docs.nextbillion.ai/routing/navigation-api
+  - https://docs.nextbillion.ai/optimization/route-optimization-api
+  - https://docs.nextbillion.ai/routing/distance-matrix-api/synchronous
+  - https://docs.nextbillion.ai/routing/isochrone-api
+  - https://docs.nextbillion.ai/routing/hours-of-service-api
+  - https://docs.nextbillion.ai/optimization/driver-assignment-api
+  - https://docs.nextbillion.ai/routing/distance-matrix-api/asynchronous
+servers:
+- url: https://api.nextbillion.io
+tags:
+- name: Isochrone
+paths:
+  /isochrone/json:
+    get:
+      operationId: get_isochrone_json
+      tags:
+      - Isochrone
+      summary: GET /isochrone/json
+      x-source: https://docs.nextbillion.ai/routing/isochrone-api
+      parameters:
+      - name: key
+        in: query
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl --location 'https://api.nextbillion.io/isochrone/json?key=<your_api_key>&coordinates=34.04715844,-118.24977187&mode=car&contours_minutes=5' \n Response \n 1 { 2 \"features\" : [ ... ] , 3 \"type\" : \"FeatureCollection\" 4 } Expand \n Here is how the above response looks on a map. We can easily visualize the area reachable within 5 minutes. It is enclosed by a contour line or a polygon around the star"

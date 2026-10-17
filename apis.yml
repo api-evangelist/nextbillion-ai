@@ -83,20 +83,20 @@ common:
 
 apis:
 - name: NextBillion AI API
-  description: Location‑based routing and optimization APIs as described in the developer documentation.
+  description: >-
+    Location‑based routing and optimization APIs as described in the developer documentation.
   humanURL: https://docs.nextbillion.ai/
   aid: nextbillion-ai:nextbillion-ai-api-2
-- aid: nextbillion-ai:nextbillion-ai-api
-  name: NextBillion.ai API
-  description: 'NextBillion.ai API as documented publicly: 18 operations. Contract generated from the documentation by API Evangelist (2026-10-13);
-
-    not the provider''s own document.'
-  humanURL: https://docs.nextbillion.ai/routing/directions-api
+- aid: nextbillion-ai:nextbillion-ai-directions-api
+  name: NextBillion.ai Directions API
+  description: The Directions API from NextBillion.ai — 1 operation(s) for directions.
+  humanURL: https://docs.nextbillion.ai/
   baseURL: https://api.nextbillion.io
+  tags:
+  - Directions
   properties:
   - type: OpenAPI
-    url: openapi/_ae-authored/nextbillion-ai-openapi-generated.yml
-    x-provenance: generated
+    url: openapi/nextbillion-ai-directions-api-openapi.yml
   - type: JSONSchema
     url: json-schema/nextbillion-ai-post-navigation-request-schema.json
   - type: JSONSchema
@@ -107,7 +107,126 @@ apis:
     url: json-schema/nextbillion-ai-get-navigation-response-schema.json
   - type: JSONSchema
     url: json-schema/nextbillion-ai-post-navigation-response-schema.json
-
+- aid: nextbillion-ai:nextbillion-ai-distancematrix-api
+  name: NextBillion.ai Distancematrix API
+  description: The Distancematrix API from NextBillion.ai — 1 operation(s) for distancematrix.
+  humanURL: https://docs.nextbillion.ai/
+  baseURL: https://api.nextbillion.io
+  tags:
+  - Distancematrix
+  properties:
+  - type: OpenAPI
+    url: openapi/nextbillion-ai-distancematrix-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/nextbillion-ai-post-navigation-request-schema.json
+  - type: JSONSchema
+    url: json-schema/nextbillion-ai-get-mdm-status-response-schema.json
+  - type: JSONSchema
+    url: json-schema/nextbillion-ai-get-navigation-json-response-schema.json
+  - type: JSONSchema
+    url: json-schema/nextbillion-ai-get-navigation-response-schema.json
+  - type: JSONSchema
+    url: json-schema/nextbillion-ai-post-navigation-response-schema.json
+- aid: nextbillion-ai:nextbillion-ai-hos-api
+  name: NextBillion.ai Hos API
+  description: The Hos API from NextBillion.ai — 1 operation(s) for hos.
+  humanURL: https://docs.nextbillion.ai/
+  baseURL: https://api.nextbillion.io
+  tags:
+  - Hos
+  properties:
+  - type: OpenAPI
+    url: openapi/nextbillion-ai-hos-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/nextbillion-ai-post-navigation-request-schema.json
+  - type: JSONSchema
+    url: json-schema/nextbillion-ai-get-mdm-status-response-schema.json
+  - type: JSONSchema
+    url: json-schema/nextbillion-ai-get-navigation-json-response-schema.json
+  - type: JSONSchema
+    url: json-schema/nextbillion-ai-get-navigation-response-schema.json
+  - type: JSONSchema
+    url: json-schema/nextbillion-ai-post-navigation-response-schema.json
+- aid: nextbillion-ai:nextbillion-ai-isochrone-api
+  name: NextBillion.ai Isochrone API
+  description: The Isochrone API from NextBillion.ai — 1 operation(s) for isochrone.
+  humanURL: https://docs.nextbillion.ai/
+  baseURL: https://api.nextbillion.io
+  tags:
+  - Isochrone
+  properties:
+  - type: OpenAPI
+    url: openapi/nextbillion-ai-isochrone-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/nextbillion-ai-post-navigation-request-schema.json
+  - type: JSONSchema
+    url: json-schema/nextbillion-ai-get-mdm-status-response-schema.json
+  - type: JSONSchema
+    url: json-schema/nextbillion-ai-get-navigation-json-response-schema.json
+  - type: JSONSchema
+    url: json-schema/nextbillion-ai-get-navigation-response-schema.json
+  - type: JSONSchema
+    url: json-schema/nextbillion-ai-post-navigation-response-schema.json
+- aid: nextbillion-ai:nextbillion-ai-mdm-api
+  name: NextBillion.ai Mdm API
+  description: The Mdm API from NextBillion.ai — 2 operation(s) for mdm.
+  humanURL: https://docs.nextbillion.ai/
+  baseURL: https://api.nextbillion.io
+  tags:
+  - Mdm
+  properties:
+  - type: OpenAPI
+    url: openapi/nextbillion-ai-mdm-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/nextbillion-ai-post-navigation-request-schema.json
+  - type: JSONSchema
+    url: json-schema/nextbillion-ai-get-mdm-status-response-schema.json
+  - type: JSONSchema
+    url: json-schema/nextbillion-ai-get-navigation-json-response-schema.json
+  - type: JSONSchema
+    url: json-schema/nextbillion-ai-get-navigation-response-schema.json
+  - type: JSONSchema
+    url: json-schema/nextbillion-ai-post-navigation-response-schema.json
+- aid: nextbillion-ai:nextbillion-ai-navigation-api
+  name: NextBillion.ai Navigation API
+  description: The Navigation API from NextBillion.ai — 2 operation(s) for navigation.
+  humanURL: https://docs.nextbillion.ai/
+  baseURL: https://api.nextbillion.io
+  tags:
+  - Navigation
+  properties:
+  - type: OpenAPI
+    url: openapi/nextbillion-ai-navigation-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/nextbillion-ai-post-navigation-request-schema.json
+  - type: JSONSchema
+    url: json-schema/nextbillion-ai-get-mdm-status-response-schema.json
+  - type: JSONSchema
+    url: json-schema/nextbillion-ai-get-navigation-json-response-schema.json
+  - type: JSONSchema
+    url: json-schema/nextbillion-ai-get-navigation-response-schema.json
+  - type: JSONSchema
+    url: json-schema/nextbillion-ai-post-navigation-response-schema.json
+- aid: nextbillion-ai:nextbillion-ai-optimization-api
+  name: NextBillion.ai Optimization API
+  description: The Optimization API from NextBillion.ai — 5 operation(s) for optimization.
+  humanURL: https://docs.nextbillion.ai/
+  baseURL: https://api.nextbillion.io
+  tags:
+  - Optimization
+  properties:
+  - type: OpenAPI
+    url: openapi/nextbillion-ai-optimization-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/nextbillion-ai-post-navigation-request-schema.json
+  - type: JSONSchema
+    url: json-schema/nextbillion-ai-get-mdm-status-response-schema.json
+  - type: JSONSchema
+    url: json-schema/nextbillion-ai-get-navigation-json-response-schema.json
+  - type: JSONSchema
+    url: json-schema/nextbillion-ai-get-navigation-response-schema.json
+  - type: JSONSchema
+    url: json-schema/nextbillion-ai-post-navigation-response-schema.json
 x-coverage:
   state: unreadable
   reason: js-rendered-docs
