@@ -25,6 +25,12 @@ modified: '2026-10-13'
 
 tags:
 - Company
+- Routing
+- Logistics
+- Artificial Intelligence
+- Mapping
+tags_raw:
+- Company
 - API
 - Routing
 - Logistics
@@ -113,6 +119,8 @@ apis:
   humanURL: https://docs.nextbillion.ai/
   baseURL: https://api.nextbillion.io
   tags:
+  - DistanceMatrix
+  tags_raw:
   - Distancematrix
   properties:
   - type: OpenAPI
@@ -133,6 +141,8 @@ apis:
   humanURL: https://docs.nextbillion.ai/
   baseURL: https://api.nextbillion.io
   tags:
+  - HOS
+  tags_raw:
   - Hos
   properties:
   - type: OpenAPI
@@ -173,6 +183,8 @@ apis:
   humanURL: https://docs.nextbillion.ai/
   baseURL: https://api.nextbillion.io
   tags:
+  - MDM
+  tags_raw:
   - Mdm
   properties:
   - type: OpenAPI
