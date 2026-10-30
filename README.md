@@ -64,5 +64,119 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-NextBillion.ai is a company surfaced via the API Evangelist harvest backlog (source: tag-qc) and added to the network as a stub for full-pipeline profiling.
-- https://nextbillion.ai/
+NextBillion.ai provides a suite of location‑based routing and optimization APIs, including Route Optimization, Distance Matrix, Directions, Driver Assignment, and Navigation SDKs. Their platform leverages AI to deliver accurate ETAs, dynamic routing, and fleet management solutions for logistics, delivery, and field service operations. The company offers on‑premise deployment and extensive documentation for developers.
+
+**Areas:** Company · Routing · Logistics · Artificial Intelligence · Mapping
+
+## NextBillion.ai on APIs.io
+
+Everything profiled for NextBillion.ai is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/nextbillion-ai/](https://apis.io/providers/nextbillion-ai/)** — or go straight to one of the APIs or properties below.
+
+### APIs (8)
+
+- [NextBillion AI API](https://apis.io/apis/nextbillion-ai/nextbillion-ai-api-2/) — Location‑based routing and optimization APIs as described in the developer documentation.
+- [NextBillion.ai Directions API](https://apis.io/apis/nextbillion-ai/nextbillion-ai-directions-api/) — The Directions API from NextBillion.ai — 1 operation(s) for directions.
+- [NextBillion.ai Distancematrix API](https://apis.io/apis/nextbillion-ai/nextbillion-ai-distancematrix-api/) — The Distancematrix API from NextBillion.ai — 1 operation(s) for distancematrix.
+- [NextBillion.ai Hos API](https://apis.io/apis/nextbillion-ai/nextbillion-ai-hos-api/) — The Hos API from NextBillion.ai — 1 operation(s) for hos.
+- [NextBillion.ai Isochrone API](https://apis.io/apis/nextbillion-ai/nextbillion-ai-isochrone-api/) — The Isochrone API from NextBillion.ai — 1 operation(s) for isochrone.
+- [NextBillion.ai Mdm API](https://apis.io/apis/nextbillion-ai/nextbillion-ai-mdm-api/) — The Mdm API from NextBillion.ai — 2 operation(s) for mdm.
+- [NextBillion.ai Navigation API](https://apis.io/apis/nextbillion-ai/nextbillion-ai-navigation-api/) — The Navigation API from NextBillion.ai — 2 operation(s) for navigation.
+- [NextBillion.ai Optimization API](https://apis.io/apis/nextbillion-ai/nextbillion-ai-optimization-api/) — The Optimization API from NextBillion.ai — 5 operation(s) for optimization.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### JSON Schema (5)
+
+The data models the API reads and writes.
+
+- [GetMdmStatusResponse](https://apis.io/schemas/nextbillion-ai/nextbillion-ai-get-mdm-status-response/)
+- [GetNavigationJsonResponse](https://apis.io/schemas/nextbillion-ai/nextbillion-ai-get-navigation-json-response/)
+- [GetNavigationResponse](https://apis.io/schemas/nextbillion-ai/nextbillion-ai-get-navigation-response/)
+- [PostNavigationRequest](https://apis.io/schemas/nextbillion-ai/nextbillion-ai-post-navigation-request/)
+- [PostNavigationResponse](https://apis.io/schemas/nextbillion-ai/nextbillion-ai-post-navigation-response/)
+
+#### JSON-LD (1)
+
+Linked-data contexts for the provider's vocabulary.
+
+- [Nextbillion Ai Context](https://apis.io/jsonld/nextbillion-ai/nextbillion-ai-context/)
+
+#### Governance rules (1)
+
+Spectral rulesets for the provider's contracts.
+
+- [NextBillion.ai API Rules](https://apis.io/rules/nextbillion-ai/nextbillion-ai-rules/)
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Nextbillion Ai Domain Security](https://apis.io/security/nextbillion-ai/nextbillion-ai-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://nextbillion.ai/)
+- [Documentation](https://docs.nextbillion.ai/)
+- [Getting started](https://nextbillion.ai/get-started)
+- [Pricing](https://nextbillion.ai/pricing)
+- [Blog](https://nextbillion.ai/blog)
+- [Trust centre](https://nextbillion.ai/trust-center)
+- [Terms of service](https://nextbillion.ai/terms-of-service)
+- [Privacy policy](https://nextbillion.ai/privacy)
+
+## API Evangelist rating
+
+**Kin Score 34.1** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 69.6 |
+| Contract quality | 24.6 |
+| Contract governance | 22.0 |
+| Operational transparency | 15.8 |
+| Developer ergonomics | 40.5 |
+| Access clarity | 39.5 |
+
+**Agent readiness 12.9** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 21.8** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/nextbillion-ai/](https://apis.io/providers/nextbillion-ai/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for NextBillion.ai: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/nextbillion-ai/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
